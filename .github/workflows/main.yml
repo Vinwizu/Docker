@@ -43,13 +43,13 @@ jobs:
           fi
 
           # Clone or update the AWS-Session repo
-          if [ ! -d "AWS-Session" ]; then
+          if [ ! -d "Docker" ]; then
             git clone https://github.com/Vinwizu/Docker.git
           else
-            cd AWS-Session && git pull origin main
+            cd Docker && git pull origin main
           fi
 
-          cd AWS-Session
+          cd Docker
           npm install
 
           # Restart app using PM2 (persistent)
